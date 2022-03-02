@@ -7,7 +7,6 @@ const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const cors = require("cors");
 
-
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("DB연결됨!"))
