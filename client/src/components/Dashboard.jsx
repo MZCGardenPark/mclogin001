@@ -59,7 +59,7 @@ const Dashboard = () => {
         src, db링크 바꿀것, db적재
       </div> 
       
-      <iframe src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0"> </iframe>
+      <iframe src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen="true"> </iframe>
       </Contents>
       
     </Container>
