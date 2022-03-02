@@ -15,7 +15,7 @@ const Contents = styled.div`
 width: 100%; 
 height: 100%;
 margin-top: 10px;
-background-color: rgb(244,244,244);
+background-color: rgb(184,184,184);
 `;
 
 const Menu = styled.ul`
@@ -59,7 +59,7 @@ const Dashboard = () => {
         src, db링크 바꿀것, db적재
       </div> 
       
-      <iframe src="https://instance_name.looker.com/embed/dashboards/1" width="100%" height="100%" frameborder="0" z-index="0"> </iframe>
+      <iframe src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0"> </iframe>
       </Contents>
       
     </Container>
