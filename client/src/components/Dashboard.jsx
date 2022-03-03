@@ -2,6 +2,7 @@
 import styled from "styled-components"; 
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const Container = styled.div`
   width: 100%; 
@@ -41,16 +42,13 @@ const SLink = styled(Link)`
     }
 `;
 
-const Looker = styled.iframe`
+const looker = styled.iframe`
       border-style: solid;
       border-width: 10px;
       position: relative;
       width: 100%;
-      height: 100%;
+      height:100%; 
       `
-
-
-
 
 const Dashboard = () => {
   
@@ -70,9 +68,8 @@ const Dashboard = () => {
         src, db링크 바꿀것, db적재
       </div> 
 
-        <Looker src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen='true'></Looker>
-      
-
+      <iframe id="looker" src="https://megazonepartner.cloud.looker.com/embed/dashboards/82?_theme={'show_filters_bar':false}" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen='true'></iframe>
+      <button>api호출</button>
       </Contents>
 
     </Container>
