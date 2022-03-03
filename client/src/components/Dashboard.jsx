@@ -41,6 +41,17 @@ const SLink = styled(Link)`
     }
 `;
 
+const Looker = styled.iframe`
+      border-style: solid;
+      border-width: 10px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      `
+
+
+
+
 const Dashboard = () => {
   
   return (
@@ -58,10 +69,12 @@ const Dashboard = () => {
       <div>
         src, db링크 바꿀것, db적재
       </div> 
+
+        <Looker src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen='true'></Looker>
       
-      <iframe src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen="true"> </iframe>
+
       </Contents>
-      
+
     </Container>
   );
 };
