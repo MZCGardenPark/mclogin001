@@ -1,7 +1,8 @@
- import { useState, useRef } from "react";
+ import { useState, useRef, useEffect } from "react";
 import styled from "styled-components"; 
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
+import styles from "../components/dashboardStyle.css";
 
 const Container = styled.div`
   width: 100%; 
@@ -61,7 +62,8 @@ const Dashboard = () => {
 
   let [screenNum, setScreenNum] = useState(0);
 
-  const remove2 = useRef();
+  // const remove2 = useRef();
+   
 
   // var iframe = document.querySelector("footer");
   // let footer = iframe.contentDocument.querySelector("footer");
@@ -76,13 +78,10 @@ const Dashboard = () => {
         </Menu>
         
       <Contents>
-       
-
-        {/* <iframe src="https://megazonepartner.cloud.looker.com/embed/dashboards/82" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen='true'></iframe> */}
+        
         <iframe src={screen[screenNum]} width="100%" height="100%" 
-        frameBorder="0" z-index="0" allow_login_screen="true"  ></iframe>
-      
-      {/* {console.log(remove2.current)} */}
+        frameBorder="0" z-index="0" allow_login_screen="true" ></iframe>
+       
      
 
       </Contents>
