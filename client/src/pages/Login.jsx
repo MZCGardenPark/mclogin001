@@ -87,7 +87,7 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             로그인
           </Button>
-          {error && <Error>에러인것같습니다..</Error>}
+          {error && <Error></Error>}
         </Form>
       </Wrapper>
     </Container>
