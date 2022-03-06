@@ -67,7 +67,7 @@ const Dashboard = () => {
 
   // var iframe = document.querySelector("footer");
   // let footer = iframe.contentDocument.querySelector("footer");
-  // footer.remove();
+  // footer.remove(); 
 
   return (
     <Container>
