@@ -57,7 +57,7 @@ const Looker = styled.iframe`
 const Dashboard = () => {
   let screen = ["https://megazonepartner.cloud.looker.com/embed/dashboards/82",
   "https://megazonepartner.cloud.looker.com/embed/dashboards/73?Date%20Formatted=2017%2F07%2F01%20to%202017%2F07%2F10&Geo%20Network%20Country=&Geo%20Network%20Region=&Traffic%20Source=&Device%20Operating%20System=&Device%20Browser=",
-  "https://megazonepartner.cloud.looker.com/embed/dashboards-legacy/2?Brand%20Name=Calvin%20Klein&Date=90%20days&filter_config=%7B%22Brand%20Name%22:%5B%7B%22type%22:%22%3D%22,%22values%22:%5B%7B%22constant%22:%22Calvin%20Klein%22%7D,%7B%7D%5D,%22id%22:4%7D%5D,%22Date%22:%5B%7B%22type%22:%22past%22,%22values%22:%5B%7B%22constant%22:%2290%22,%22unit%22:%22day%22%7D,%7B%7D%5D,%22id%22:5%7D%5D%7D"
+  "https://megazonepartner.cloud.looker.com/embed/dashboards-legacy/7?Timeframe=Week&Primary%20Metric=Users&Second%20Metric=Conversion%20Rate&Date%20Range=24%20weeks%20ago%20for%2024%20weeks&filter_config=%7B%22Timeframe%22:%5B%7B%22type%22:%22is%22,%22values%22:%5B%7B%22constant%22:%22Week%22%7D,%7B%7D%5D,%22id%22:8%7D%5D,%22Primary%20Metric%22:%5B%7B%22type%22:%22is%22,%22values%22:%5B%7B%22constant%22:%22Users%22%7D,%7B%7D%5D,%22id%22:9%7D%5D,%22Second%20Metric%22:%5B%7B%22type%22:%22is%22,%22values%22:%5B%7B%22constant%22:%22Conversion%20Rate%22%7D,%7B%7D%5D,%22id%22:10%7D%5D,%22Date%20Range%22:%5B%7B%22type%22:%22past%22,%22values%22:%5B%7B%22constant%22:%2224%22,%22unit%22:%22c_wk%22%7D,%7B%7D%5D,%22id%22:11%7D%5D%7D"
   ];
 
   let [screenNum, setScreenNum] = useState(0);
