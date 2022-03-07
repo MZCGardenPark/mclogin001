@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 ReactDOM.render(
-  <Provider store={store}> 
+  <Provider store={store}>  
     <PersistGate loading={null} persistor={persistor}>
       <App />
     </PersistGate>
