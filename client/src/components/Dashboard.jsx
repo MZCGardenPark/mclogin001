@@ -1,8 +1,11 @@
  import { useState } from "react";
-import styled from "styled-components"; 
+import styled, { ThemeProvider } from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { getLookerEmbed } from '../getLookerEmbed';
+
+const eurl = getLookerEmbed();
 
 const Container = styled.div`
   width: 100%; 
@@ -42,16 +45,17 @@ const SLink = styled(Link)`
     }
 `;
 
-const looker = styled.iframe`
-      border-style: solid;
-      border-width: 10px;
-      position: relative;
-      width: 100%;
-      height:100%; 
-      `
+
+
 
 const Dashboard = () => {
+  // const [dark, setDark] = useState();
   
+  // const onDark = () => {
+  //   axios.post('https://megazonepartner.cloud.looker.com/embed/dashboards/82/api/3.1?themes={"show_filters_bar":false}')
+  // }
+
+
   return (
     <Container>
         <Menu> 
@@ -67,9 +71,8 @@ const Dashboard = () => {
       <div>
         src, db링크 바꿀것, db적재
       </div> 
-
-      <iframe id="looker" src="https://megazonepartner.cloud.looker.com/embed/dashboards/82?_theme={'show_filters_bar':false}" width="100%" height="100%" frameborder="0" z-index="0" allow_login_screen='true'></iframe>
-      <button>api호출</button>
+        <iframe id="looker" src={eurl} width="80%" height="80%" z-index="0" sandbox="allow-scripts"></iframe>      
+      <button>다크모드</button>
       </Contents>
 
     </Container>
