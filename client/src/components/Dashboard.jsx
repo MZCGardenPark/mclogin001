@@ -1,8 +1,11 @@
- import { useState, useRef, useEffect } from "react";
-import styled from "styled-components"; 
+ import { useState } from "react";
+import styled, { ThemeProvider } from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
-import styles from "../components/dashboardStyle.css";
+import axios from 'axios';
+import { getLookerEmbed } from '../getLookerEmbed';
+
+const eurl = getLookerEmbed();
 
 const Container = styled.div`
   width: 100%; 
@@ -42,32 +45,17 @@ const SLink = styled(Link)`
     }
 `;
 
-const Looker = styled.iframe`
-      border-style: solid;
-      border-width: 10px;
-      position: relative;
-      width: 100%;
-      height: 100%;
-      `
-
 
 
 
 
 const Dashboard = () => {
-  let screen = ["https://megazonepartner.cloud.looker.com/embed/dashboards/82",
-  "https://megazonepartner.cloud.looker.com/embed/dashboards/73?Date%20Formatted=2017%2F07%2F01%20to%202017%2F07%2F10&Geo%20Network%20Country=&Geo%20Network%20Region=&Traffic%20Source=&Device%20Operating%20System=&Device%20Browser=",
-  "https://megazonepartner.cloud.looker.com/embed/dashboards-legacy/2?Brand%20Name=Calvin%20Klein&Date=90%20days&filter_config=%7B%22Brand%20Name%22:%5B%7B%22type%22:%22%3D%22,%22values%22:%5B%7B%22constant%22:%22Calvin%20Klein%22%7D,%7B%7D%5D,%22id%22:4%7D%5D,%22Date%22:%5B%7B%22type%22:%22past%22,%22values%22:%5B%7B%22constant%22:%2290%22,%22unit%22:%22day%22%7D,%7B%7D%5D,%22id%22:5%7D%5D%7D"
-  ];
+  // const [dark, setDark] = useState();
+  
+  // const onDark = () => {
+  //   axios.post('https://megazonepartner.cloud.looker.com/embed/dashboards/82/api/3.1?themes={"show_filters_bar":false}')
+  // }
 
-  let [screenNum, setScreenNum] = useState(0);
-
-  // const remove2 = useRef();
-   
-
-  // var iframe = document.querySelector("footer");
-  // let footer = iframe.contentDocument.querySelector("footer");
-  // footer.remove();
 
   return (
     <Container>
@@ -78,12 +66,12 @@ const Dashboard = () => {
         </Menu>
         
       <Contents>
-        
-        <iframe src={screen[screenNum]} width="100%" height="100%" 
-        frameBorder="0" z-index="0" allow_login_screen="true" ></iframe>
-       
-     
-
+      <div>memo :</div> 
+      <div>
+        src, db링크 바꿀것, db적재
+      </div> 
+        <iframe id="looker" src={eurl} width="80%" height="80%" z-index="0" sandbox="allow-scripts"></iframe>      
+      <button>다크모드</button>
       </Contents>
 
     </Container>
