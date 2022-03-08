@@ -1,4 +1,4 @@
- import { useState } from "react";
+ import { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import axios from 'axios';
 import { getLookerEmbed } from '../getLookerEmbed';
 
 const eurl = getLookerEmbed();
-
+const url = 'https://megazonepartner.cloud.looker.com/embed/dashboards/82';
 const Container = styled.div`
   width: 100%; 
   height: 80vh;
@@ -45,19 +45,24 @@ const SLink = styled(Link)`
     }
 `;
 
+const Frame1 = styled.div`
+  margin-left: 5%;
+  position: relative;
+  width: 80%;
+  height: 80%;
+`
 
 
 
 const Dashboard = () => {
-  // const [dark, setDark] = useState();
-  
-  // const onDark = () => {
-  //   axios.post('https://megazonepartner.cloud.looker.com/embed/dashboards/82/api/3.1?themes={"show_filters_bar":false}')
-  // }
+  const a = document.getElementsByClassName("Footer-sc-1ief1vb-0 dWJJOy");
+  function deleteE() {
+    a.remove();
+  }
 
 
   return (
-    <Container>
+    <Container position='relative'>
         <Menu> 
           <MenuItem><SLink to="/">메뉴 1</SLink></MenuItem>
           <MenuItem><SLink to="/">메뉴 2</SLink></MenuItem>
@@ -70,9 +75,17 @@ const Dashboard = () => {
       <div>memo :</div> 
       <div>
         src, db링크 바꿀것, db적재
-      </div> 
-        <iframe id="looker" src={eurl} width="80%" height="80%" z-index="0" sandbox="allow-scripts"></iframe>      
-      <button>다크모드</button>
+      </div>
+      <Frame1 id='frame1'>
+        <iframe id="looker"
+                src="https://megazonepartner.cloud.looker.com/embed/dashboards/82"
+                width="100%"
+                height="100%"
+                z-index="0" 
+                sandbox= "allow-scripts allow-same-origin"
+                allowFullScreen
+                ></iframe>      </Frame1>
+      <button onClick={deleteE}>다크모드</button>
       </Contents>
 
     </Container>
