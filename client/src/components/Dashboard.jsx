@@ -87,7 +87,7 @@ const Dashboard = () => {
       <Contents> 
         {/* <Img /> */}
         <iframe src={screen[screenNum]} width="100%" height="100%" 
-        frameBorder="0" z-index="0" allow_login_screen="true" ></iframe>
+        frameBorder="0" z-index="0" allow_login_screen="true" ></iframe> 
        
         <Footer><Img /> </Footer>
 
